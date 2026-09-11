@@ -98,7 +98,7 @@ function updatePreview(){
   document.getElementById('preview').textContent=text||'Your stylish text will appear here';
 }
 </script>
-<script src="data.js"></script><script src="hashtags.js"></script>\n<script src="bios.js"></script>
+<script src="data.js"></script><script src="hashtags.js"></script><script src="bios.js"></script>
 <script>
 (function(){
   function renderBios(){
@@ -153,7 +153,7 @@ document.addEventListener('click',function(e){
     });
 });
 })();
-</script>\n
+</script>
 <style>
 #fontList{display:grid;gap:10px;margin-top:10px}
 .font-card{background:#111628;border:1px solid #252c42;border-radius:14px;padding:13px}
@@ -221,23 +221,21 @@ document.addEventListener('click',function(e){
 })();
 </script>
 
-<script type="module">
-import {
-  AdMob,
-  BannerAdSize,
-  BannerAdPosition
-} from '@capacitor-community/admob';
-
+<script>
 window.addEventListener('load', async () => {
   try {
-    await AdMob.initialize({
-      initializeForTesting: true
-    });
+    const AdMob = window.Capacitor?.registerPlugin?.('AdMob');
+    if (!AdMob) {
+      console.error('AdMob plugin not available');
+      return;
+    }
+
+    await AdMob.initialize({ initializeForTesting: true });
 
     await AdMob.showBanner({
       adId: 'ca-app-pub-3940256099942544/6300978111',
-      adSize: BannerAdSize.ADAPTIVE_BANNER,
-      position: BannerAdPosition.BOTTOM_CENTER,
+      adSize: 'ADAPTIVE_BANNER',
+      position: 'BOTTOM_CENTER',
       margin: 0,
       isTesting: true
     });
@@ -249,4 +247,4 @@ window.addEventListener('load', async () => {
 });
 </script>
 
-</body>\n</html>\n
+</body></html>
