@@ -84,7 +84,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
   </div>
 </div>
 
-<div class="ad">AD SPACE — TEST BANNER WILL APPEAR HERE</div>
+<div id="admob-banner" class="admob-banner"></div>
 
 <script>
 function showTab(id,btn){
@@ -220,4 +220,33 @@ document.addEventListener('click',function(e){
   if(input) input.addEventListener('input',renderFonts);
 })();
 </script>
-\n</body>\n</html>\n
+
+<script type="module">
+import {
+  AdMob,
+  BannerAdSize,
+  BannerAdPosition
+} from '@capacitor-community/admob';
+
+window.addEventListener('load', async () => {
+  try {
+    await AdMob.initialize({
+      initializeForTesting: true
+    });
+
+    await AdMob.showBanner({
+      adId: 'ca-app-pub-3940256099942544/6300978111',
+      adSize: BannerAdSize.ADAPTIVE_BANNER,
+      position: BannerAdPosition.BOTTOM_CENTER,
+      margin: 0,
+      isTesting: true
+    });
+
+    console.log('AdMob test banner shown');
+  } catch (error) {
+    console.error('AdMob error:', error);
+  }
+});
+</script>
+
+</body>\n</html>\n
