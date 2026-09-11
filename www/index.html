@@ -66,7 +66,29 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
     <div id="bioList"></div>
   </div>
 
-  <div id="hashtags" class="section">
+  <div id="hashtags" class="section"><div id="hashtagList"></div>
+<script>
+(function(){
+  function renderHashtags(){
+    const box=document.getElementById('hashtagList');
+    if(!box || !window.instaHashtags) return;
+    box.innerHTML='';
+    window.instaHashtags.forEach((tags,i)=>{
+      const card=document.createElement('div');
+      card.className='font-card';
+      card.innerHTML='<div class="font-name">#'+(i+1)+' • Hashtag Set</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
+      card.querySelector('.font-preview').textContent=tags;
+      card.querySelector('.copy-btn').onclick=async()=>{
+        try{await navigator.clipboard.writeText(tags)}catch(e){}
+        card.querySelector('.copy-btn').textContent='Copied ✓';
+        setTimeout(()=>card.querySelector('.copy-btn').textContent='Copy',1200);
+      };
+      box.appendChild(card);
+    });
+  }
+  window.addEventListener('load',renderHashtags);
+})();
+</script>
     <div class="count">Trending Instagram Hashtags</div>
   </div>
 </div>
@@ -85,7 +107,7 @@ function updatePreview(){
   document.getElementById('preview').textContent=text||'Your stylish text will appear here';
 }
 </script>
-<script src="data.js"></script>\n<script src="bios.js"></script>
+<script src="data.js"></script><script src="hashtags.js"></script>\n<script src="bios.js"></script>
 <script>
 (function(){
   function renderBios(){
