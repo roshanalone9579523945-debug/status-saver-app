@@ -63,6 +63,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
 
   <div id="bios" class="section">
     <div class="count">Available: 250 Insta Bios</div>
+    <div id="bioList"></div>
   </div>
 
   <div id="hashtags" class="section">
@@ -84,7 +85,30 @@ function updatePreview(){
   document.getElementById('preview').textContent=text||'Your stylish text will appear here';
 }
 </script>
-<script src="data.js"></script>\n
+<script src="data.js"></script>\n<script src="bios.js"></script>
+<script>
+(function(){
+  function renderBios(){
+    const box=document.getElementById('bioList');
+    if(!box || !window.instaBios) return;
+    box.innerHTML='';
+
+    window.instaBios.forEach((bio)=>{
+      const card=document.createElement('div');
+      card.className='font-card';
+      card.innerHTML='<div class="font-name">#'+bio.id+' • '+bio.category+'</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
+      card.querySelector('.font-preview').textContent=bio.text;
+      card.querySelector('.copy-btn').onclick=async()=>{
+        try{await navigator.clipboard.writeText(bio.text)}catch(e){}
+        card.querySelector('.copy-btn').textContent='Copied ✓';
+        setTimeout(()=>card.querySelector('.copy-btn').textContent='Copy',1200);
+      };
+      box.appendChild(card);
+    });
+  }
+  window.addEventListener('load',renderBios);
+})();
+</script>\n
 <style>
 #fontList{display:grid;gap:10px;margin-top:10px}
 .font-card{background:#111628;border:1px solid #252c42;border-radius:14px;padding:13px}
