@@ -2099,4 +2099,4 @@ window.fancyFonts=[
     "suffix": " ♕",
     "transform": "t=>t.split('').join('_')"
   }
-];\n
+];
