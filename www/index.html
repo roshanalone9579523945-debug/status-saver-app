@@ -58,6 +58,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
       <div class="preview" id="preview">Your stylish text will appear here</div>
     </div>
     <div class="count">Available: 300 Fancy Fonts</div>
+<div id="fontList"></div>
   </div>
 
   <div id="bios" class="section">
@@ -83,5 +84,41 @@ function updatePreview(){
   document.getElementById('preview').textContent=text||'Your stylish text will appear here';
 }
 </script>
-</body>
+<script src="data.js"></script></body>
 </html>
+<style>
+#fontList{display:grid;gap:10px;margin-top:10px}
+.font-card{background:#111628;border:1px solid #252c42;border-radius:14px;padding:13px}
+.font-name{font-size:11px;color:#29e7ff;margin-bottom:7px}
+.font-preview{font-size:20px;word-break:break-word;margin-bottom:10px}
+.copy-btn{border:0;border-radius:9px;padding:8px 14px;background:linear-gradient(135deg,#ff3f91,#8b5cf6);color:#fff;font-weight:bold}
+</style>
+<script>
+(function(){
+  function renderFonts(){
+    const box=document.getElementById('fontList');
+    if(!box || !window.fancyFonts) return;
+    const text=document.getElementById('customText')?.value || 'Roshan';
+    box.innerHTML='';
+    window.fancyFonts.forEach((font,i)=>{
+      let fn;
+      try{ fn=eval('('+font.transform+')'); }catch(e){ fn=t=>t; }
+      const styled=font.prefix+fn(text)+font.suffix;
+      const card=document.createElement('div');
+      card.className='font-card';
+      card.innerHTML='<div class="font-name">'+(i+1)+'. '+font.name+' • '+font.category+'</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
+      card.querySelector('.font-preview').textContent=styled;
+      card.querySelector('.copy-btn').onclick=()=>{
+        navigator.clipboard.writeText(styled);
+        card.querySelector('.copy-btn').textContent='Copied ✓';
+        setTimeout(()=>card.querySelector('.copy-btn').textContent='Copy',1200);
+      };
+      box.appendChild(card);
+    });
+  }
+  window.addEventListener('load',renderFonts);
+  window.renderFonts=renderFonts;
+  const input=document.getElementById('customText');
+  if(input) input.addEventListener('input',renderFonts);
+})();
+</script>
