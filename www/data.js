@@ -1,3 +1,2102 @@
-const fancyFonts = [{"id":1,"name":"Bold 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":2,"name":"Bold 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":3,"name":"Bold 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":4,"name":"Bold 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":5,"name":"Bold 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":6,"name":"Bold 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":7,"name":"Bold 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":8,"name":"Bold 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":9,"name":"Bold 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":10,"name":"Bold 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":11,"name":"Bold 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":12,"name":"Bold 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":13,"name":"Bold 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":14,"name":"Bold 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":15,"name":"Bold 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":16,"name":"Bold 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":17,"name":"Bold 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":18,"name":"Bold 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":19,"name":"Bold 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":20,"name":"Bold 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":21,"name":"Bold 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":22,"name":"Bold 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":23,"name":"Bold 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":24,"name":"Bold 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":25,"name":"Bold 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D400+c.charCodeAt(0)-65 : 0x1D41A+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":26,"name":"Italic 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":27,"name":"Italic 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":28,"name":"Italic 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":29,"name":"Italic 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":30,"name":"Italic 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":31,"name":"Italic 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":32,"name":"Italic 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":33,"name":"Italic 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":34,"name":"Italic 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":35,"name":"Italic 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":36,"name":"Italic 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":37,"name":"Italic 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":38,"name":"Italic 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":39,"name":"Italic 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":40,"name":"Italic 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":41,"name":"Italic 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":42,"name":"Italic 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":43,"name":"Italic 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":44,"name":"Italic 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":45,"name":"Italic 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":46,"name":"Italic 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":47,"name":"Italic 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":48,"name":"Italic 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":49,"name":"Italic 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":50,"name":"Italic 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D434+c.charCodeAt(0)-65 : 0x1D44E+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":51,"name":"Bold Italic 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":52,"name":"Bold Italic 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":53,"name":"Bold Italic 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":54,"name":"Bold Italic 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":55,"name":"Bold Italic 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":56,"name":"Bold Italic 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":57,"name":"Bold Italic 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":58,"name":"Bold Italic 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":59,"name":"Bold Italic 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":60,"name":"Bold Italic 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":61,"name":"Bold Italic 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":62,"name":"Bold Italic 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":63,"name":"Bold Italic 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":64,"name":"Bold Italic 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":65,"name":"Bold Italic 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":66,"name":"Bold Italic 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":67,"name":"Bold Italic 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":68,"name":"Bold Italic 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":69,"name":"Bold Italic 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":70,"name":"Bold Italic 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":71,"name":"Bold Italic 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":72,"name":"Bold Italic 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":73,"name":"Bold Italic 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":74,"name":"Bold Italic 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":75,"name":"Bold Italic 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D468+c.charCodeAt(0)-65 : 0x1D482+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":76,"name":"Script 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":77,"name":"Script 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":78,"name":"Script 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":79,"name":"Script 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":80,"name":"Script 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":81,"name":"Script 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":82,"name":"Script 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":83,"name":"Script 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":84,"name":"Script 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":85,"name":"Script 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":86,"name":"Script 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":87,"name":"Script 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":88,"name":"Script 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":89,"name":"Script 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":90,"name":"Script 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":91,"name":"Script 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":92,"name":"Script 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":93,"name":"Script 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":94,"name":"Script 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":95,"name":"Script 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":96,"name":"Script 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":97,"name":"Script 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":98,"name":"Script 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":99,"name":"Script 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":100,"name":"Script 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D49C+c.charCodeAt(0)-65 : 0x1D4B6+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":101,"name":"Bold Script 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":102,"name":"Bold Script 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":103,"name":"Bold Script 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":104,"name":"Bold Script 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":105,"name":"Bold Script 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":106,"name":"Bold Script 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":107,"name":"Bold Script 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":108,"name":"Bold Script 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":109,"name":"Bold Script 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":110,"name":"Bold Script 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":111,"name":"Bold Script 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":112,"name":"Bold Script 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":113,"name":"Bold Script 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":114,"name":"Bold Script 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":115,"name":"Bold Script 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":116,"name":"Bold Script 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":117,"name":"Bold Script 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":118,"name":"Bold Script 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":119,"name":"Bold Script 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":120,"name":"Bold Script 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":121,"name":"Bold Script 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":122,"name":"Bold Script 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":123,"name":"Bold Script 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":124,"name":"Bold Script 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":125,"name":"Bold Script 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D4D0+c.charCodeAt(0)-65 : 0x1D4EA+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":126,"name":"Fraktur 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":127,"name":"Fraktur 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":128,"name":"Fraktur 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":129,"name":"Fraktur 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":130,"name":"Fraktur 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":131,"name":"Fraktur 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":132,"name":"Fraktur 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":133,"name":"Fraktur 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":134,"name":"Fraktur 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":135,"name":"Fraktur 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":136,"name":"Fraktur 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":137,"name":"Fraktur 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":138,"name":"Fraktur 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":139,"name":"Fraktur 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":140,"name":"Fraktur 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":141,"name":"Fraktur 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":142,"name":"Fraktur 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":143,"name":"Fraktur 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":144,"name":"Fraktur 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":145,"name":"Fraktur 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":146,"name":"Fraktur 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":147,"name":"Fraktur 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":148,"name":"Fraktur 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":149,"name":"Fraktur 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":150,"name":"Fraktur 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D504+c.charCodeAt(0)-65 : 0x1D51E+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":151,"name":"Bold Fraktur 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":152,"name":"Bold Fraktur 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":153,"name":"Bold Fraktur 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":154,"name":"Bold Fraktur 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":155,"name":"Bold Fraktur 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":156,"name":"Bold Fraktur 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":157,"name":"Bold Fraktur 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":158,"name":"Bold Fraktur 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":159,"name":"Bold Fraktur 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":160,"name":"Bold Fraktur 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":161,"name":"Bold Fraktur 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":162,"name":"Bold Fraktur 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":163,"name":"Bold Fraktur 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":164,"name":"Bold Fraktur 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":165,"name":"Bold Fraktur 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":166,"name":"Bold Fraktur 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":167,"name":"Bold Fraktur 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":168,"name":"Bold Fraktur 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":169,"name":"Bold Fraktur 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":170,"name":"Bold Fraktur 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":171,"name":"Bold Fraktur 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":172,"name":"Bold Fraktur 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":173,"name":"Bold Fraktur 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":174,"name":"Bold Fraktur 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":175,"name":"Bold Fraktur 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D56C+c.charCodeAt(0)-65 : 0x1D586+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":176,"name":"Double 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":177,"name":"Double 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":178,"name":"Double 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":179,"name":"Double 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":180,"name":"Double 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":181,"name":"Double 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":182,"name":"Double 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":183,"name":"Double 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":184,"name":"Double 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":185,"name":"Double 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":186,"name":"Double 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":187,"name":"Double 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":188,"name":"Double 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":189,"name":"Double 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":190,"name":"Double 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":191,"name":"Double 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":192,"name":"Double 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":193,"name":"Double 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":194,"name":"Double 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":195,"name":"Double 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":196,"name":"Double 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":197,"name":"Double 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":198,"name":"Double 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":199,"name":"Double 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":200,"name":"Double 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D538+c.charCodeAt(0)-65 : 0x1D552+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":201,"name":"Sans 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":202,"name":"Sans 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":203,"name":"Sans 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":204,"name":"Sans 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":205,"name":"Sans 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":206,"name":"Sans 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":207,"name":"Sans 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":208,"name":"Sans 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":209,"name":"Sans 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":210,"name":"Sans 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":211,"name":"Sans 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":212,"name":"Sans 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":213,"name":"Sans 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":214,"name":"Sans 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":215,"name":"Sans 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":216,"name":"Sans 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":217,"name":"Sans 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":218,"name":"Sans 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":219,"name":"Sans 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":220,"name":"Sans 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":221,"name":"Sans 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":222,"name":"Sans 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":223,"name":"Sans 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":224,"name":"Sans 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":225,"name":"Sans 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5A0+c.charCodeAt(0)-65 : 0x1D5BA+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":226,"name":"Sans Bold 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":227,"name":"Sans Bold 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":228,"name":"Sans Bold 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":229,"name":"Sans Bold 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":230,"name":"Sans Bold 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":231,"name":"Sans Bold 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":232,"name":"Sans Bold 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":233,"name":"Sans Bold 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":234,"name":"Sans Bold 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":235,"name":"Sans Bold 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":236,"name":"Sans Bold 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":237,"name":"Sans Bold 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":238,"name":"Sans Bold 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":239,"name":"Sans Bold 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":240,"name":"Sans Bold 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":241,"name":"Sans Bold 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":242,"name":"Sans Bold 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":243,"name":"Sans Bold 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":244,"name":"Sans Bold 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":245,"name":"Sans Bold 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":246,"name":"Sans Bold 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":247,"name":"Sans Bold 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":248,"name":"Sans Bold 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":249,"name":"Sans Bold 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":250,"name":"Sans Bold 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D5D4+c.charCodeAt(0)-65 : 0x1D5EE+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":251,"name":"Sans Italic 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":252,"name":"Sans Italic 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":253,"name":"Sans Italic 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":254,"name":"Sans Italic 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":255,"name":"Sans Italic 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":256,"name":"Sans Italic 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":257,"name":"Sans Italic 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":258,"name":"Sans Italic 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":259,"name":"Sans Italic 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":260,"name":"Sans Italic 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":261,"name":"Sans Italic 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":262,"name":"Sans Italic 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":263,"name":"Sans Italic 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":264,"name":"Sans Italic 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":265,"name":"Sans Italic 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":266,"name":"Sans Italic 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":267,"name":"Sans Italic 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":268,"name":"Sans Italic 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":269,"name":"Sans Italic 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":270,"name":"Sans Italic 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":271,"name":"Sans Italic 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":272,"name":"Sans Italic 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":273,"name":"Sans Italic 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":274,"name":"Sans Italic 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":275,"name":"Sans Italic 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D608+c.charCodeAt(0)-65 : 0x1D622+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"},{"id":276,"name":"Sans Bold Italic 1","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"✨","suffix":"✨"},{"id":277,"name":"Sans Bold Italic 2","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"꧁","suffix":"꧂"},{"id":278,"name":"Sans Bold Italic 3","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"『","suffix":"』"},{"id":279,"name":"Sans Bold Italic 4","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"【","suffix":"】"},{"id":280,"name":"Sans Bold Italic 5","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"《","suffix":"》"},{"id":281,"name":"Sans Bold Italic 6","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"「","suffix":"」"},{"id":282,"name":"Sans Bold Italic 7","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"〘","suffix":"〙"},{"id":283,"name":"Sans Bold Italic 8","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"༺","suffix":"༻"},{"id":284,"name":"Sans Bold Italic 9","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"★","suffix":"★"},{"id":285,"name":"Sans Bold Italic 10","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"☆","suffix":"☆"},{"id":286,"name":"Sans Bold Italic 11","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"✦","suffix":"✦"},{"id":287,"name":"Sans Bold Italic 12","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"✧","suffix":"✧"},{"id":288,"name":"Sans Bold Italic 13","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"♡","suffix":"♡"},{"id":289,"name":"Sans Bold Italic 14","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"♥","suffix":"♥"},{"id":290,"name":"Sans Bold Italic 15","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"⚡","suffix":"⚡"},{"id":291,"name":"Sans Bold Italic 16","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"☯","suffix":"☯"},{"id":292,"name":"Sans Bold Italic 17","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"☠","suffix":"☠"},{"id":293,"name":"Sans Bold Italic 18","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"♛","suffix":"♛"},{"id":294,"name":"Sans Bold Italic 19","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"♕","suffix":"♕"},{"id":295,"name":"Sans Bold Italic 20","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"亗","suffix":"亗"},{"id":296,"name":"Sans Bold Italic 21","category":"Attitude","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"ツ","suffix":"ツ"},{"id":297,"name":"Sans Bold Italic 22","category":"YPS & Style","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"シ","suffix":"シ"},{"id":298,"name":"Sans Bold Italic 23","category":"Tech & Dev","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"么","suffix":"么"},{"id":299,"name":"Sans Bold Italic 24","category":"Love & Vibes","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"彡","suffix":"彡"},{"id":300,"name":"Sans Bold Italic 25","category":"Gym & Fitness","transform":"t => t.replace(/[A-Za-z]/g, c => String.fromCodePoint(c <= 'Z' ? 0x1D63C+c.charCodeAt(0)-65 : 0x1D656+c.charCodeAt(0)-97))","prefix":"乂","suffix":"乂"}];
-
-window.fancyFonts = fancyFonts;
+window.fancyFonts=[
+  {
+    "name": "BOLD CAPS 001",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 002",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 003",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 004",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 005",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 006",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 007",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 008",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 009",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "BOLD CAPS 010",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.toUpperCase()"
+  },
+  {
+    "name": "Small Letters 011",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 012",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 013",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 014",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 015",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 016",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 017",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 018",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 019",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Small Letters 020",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.toLowerCase()"
+  },
+  {
+    "name": "Reverse 021",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 022",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 023",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 024",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 025",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 026",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 027",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 028",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 029",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Reverse 030",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].reverse().join('')"
+  },
+  {
+    "name": "Spaced 031",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 032",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 033",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 034",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 035",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 036",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 037",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 038",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 039",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Spaced 040",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].join(' ')"
+  },
+  {
+    "name": "Wide Space 041",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 042",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 043",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 044",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 045",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 046",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 047",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 048",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 049",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Wide Space 050",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].join('  ')"
+  },
+  {
+    "name": "Dot Style 051",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 052",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 053",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 054",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 055",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 056",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 057",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 058",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 059",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Dot Style 060",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].join('·')"
+  },
+  {
+    "name": "Slash Style 061",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 062",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 063",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 064",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 065",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 066",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 067",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 068",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 069",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Slash Style 070",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].join('/')"
+  },
+  {
+    "name": "Dash Style 071",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 072",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 073",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 074",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 075",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 076",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 077",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 078",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 079",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Dash Style 080",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].join('—')"
+  },
+  {
+    "name": "Wave Style 081",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 082",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 083",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 084",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 085",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 086",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 087",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 088",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 089",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Wave Style 090",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].map((c,i)=>i%2?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 091",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 092",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 093",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 094",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 095",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 096",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 097",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 098",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 099",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Caps Mix 100",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>[...t].map((c,i)=>i%3===0?c.toUpperCase():c.toLowerCase()).join('')"
+  },
+  {
+    "name": "Leet 101",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 102",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 103",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 104",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 105",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 106",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 107",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 108",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 109",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Leet 110",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.replace(/[aAeEiIoOsStT]/g,c=>({a:'4',A:'4',e:'3',E:'3',i:'1',I:'1',o:'0',O:'0',s:'5',S:'5',t:'7',T:'7'}[c]))"
+  },
+  {
+    "name": "Mirror Letters 111",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 112",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 113",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 114",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 115",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 116",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 117",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 118",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 119",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Mirror Letters 120",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.replace(/[bB]/g,'8').replace(/[eE]/g,'3').replace(/[iI]/g,'1').replace(/[oO]/g,'0').replace(/[sS]/g,'5')"
+  },
+  {
+    "name": "Initial Caps 121",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 122",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 123",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 124",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 125",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 126",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 127",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 128",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 129",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Initial Caps 130",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toUpperCase())"
+  },
+  {
+    "name": "Lower Initial 131",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 132",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 133",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 134",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 135",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 136",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 137",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 138",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 139",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Lower Initial 140",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.replace(/\\b\\w/g,c=>c.toLowerCase())"
+  },
+  {
+    "name": "Reverse Words 141",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 142",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 143",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 144",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 145",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 146",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 147",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 148",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 149",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Reverse Words 150",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split(' ').reverse().join(' ')"
+  },
+  {
+    "name": "Double Space 151",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 152",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 153",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 154",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 155",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 156",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 157",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 158",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 159",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Double Space 160",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('  ')"
+  },
+  {
+    "name": "Colon Style 161",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 162",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 163",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 164",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 165",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 166",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 167",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 168",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 169",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Colon Style 170",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join(':')"
+  },
+  {
+    "name": "Pipe Style 171",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 172",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 173",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 174",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 175",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 176",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 177",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 178",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 179",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Pipe Style 180",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('|')"
+  },
+  {
+    "name": "Plus Style 181",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 182",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 183",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 184",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 185",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 186",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 187",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 188",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 189",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Plus Style 190",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('+')"
+  },
+  {
+    "name": "Equal Style 191",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 192",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 193",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 194",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 195",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 196",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 197",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 198",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 199",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Equal Style 200",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('=')"
+  },
+  {
+    "name": "Star Letters 201",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 202",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 203",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 204",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 205",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 206",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 207",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 208",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 209",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Star Letters 210",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('★')"
+  },
+  {
+    "name": "Heart Letters 211",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 212",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 213",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 214",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 215",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 216",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 217",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 218",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 219",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Heart Letters 220",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('♥')"
+  },
+  {
+    "name": "Diamond Letters 221",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 222",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 223",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 224",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 225",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 226",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 227",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 228",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 229",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Diamond Letters 230",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('◆')"
+  },
+  {
+    "name": "Circle Letters 231",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 232",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 233",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 234",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 235",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 236",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 237",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 238",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 239",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Circle Letters 240",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('•')"
+  },
+  {
+    "name": "Arrow Letters 241",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 242",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 243",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 244",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 245",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 246",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 247",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 248",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 249",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Arrow Letters 250",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('→')"
+  },
+  {
+    "name": "Spark Letters 251",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 252",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 253",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 254",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 255",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 256",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 257",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 258",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 259",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Spark Letters 260",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('✦')"
+  },
+  {
+    "name": "Cross Letters 261",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 262",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 263",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 264",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 265",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 266",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 267",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 268",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 269",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Cross Letters 270",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('×')"
+  },
+  {
+    "name": "Tilde Letters 271",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 272",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 273",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 274",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 275",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 276",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 277",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 278",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 279",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Tilde Letters 280",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('~')"
+  },
+  {
+    "name": "Hash Letters 281",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 282",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 283",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 284",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 285",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 286",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 287",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 288",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 289",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Hash Letters 290",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('#')"
+  },
+  {
+    "name": "Underline Style 291",
+    "category": "Attitude",
+    "prefix": "✨ ",
+    "suffix": " ✨",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 292",
+    "category": "YPS & Style",
+    "prefix": "★ ",
+    "suffix": " ★",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 293",
+    "category": "Tech & Dev",
+    "prefix": "⚡ ",
+    "suffix": " ⚡",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 294",
+    "category": "Love & Vibes",
+    "prefix": "♥ ",
+    "suffix": " ♥",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 295",
+    "category": "Gym & Fitness",
+    "prefix": "✦ ",
+    "suffix": " ✦",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 296",
+    "category": "Attitude",
+    "prefix": "❖ ",
+    "suffix": " ❖",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 297",
+    "category": "YPS & Style",
+    "prefix": "❀ ",
+    "suffix": " ❀",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 298",
+    "category": "Tech & Dev",
+    "prefix": "☾ ",
+    "suffix": " ☽",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 299",
+    "category": "Love & Vibes",
+    "prefix": "♛ ",
+    "suffix": " ♛",
+    "transform": "t=>t.split('').join('_')"
+  },
+  {
+    "name": "Underline Style 300",
+    "category": "Gym & Fitness",
+    "prefix": "♕ ",
+    "suffix": " ♕",
+    "transform": "t=>t.split('').join('_')"
+  }
+];\n
