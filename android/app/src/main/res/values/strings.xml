@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Insta Font &amp; Bio Hub</string>
+    <string name="title_activity_main">Insta Font &amp; Bio Hub</string>
+    <string name="package_name">com.instafont.biohub</string>
+    <string name="custom_url_scheme">com.instafont.biohub</string>
+</resources>
