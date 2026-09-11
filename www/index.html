@@ -84,41 +84,71 @@ function updatePreview(){
   document.getElementById('preview').textContent=text||'Your stylish text will appear here';
 }
 </script>
-<script src="data.js"></script></body>
-</html>
+<script src="data.js"></script>\n
 <style>
 #fontList{display:grid;gap:10px;margin-top:10px}
 .font-card{background:#111628;border:1px solid #252c42;border-radius:14px;padding:13px}
 .font-name{font-size:11px;color:#29e7ff;margin-bottom:7px}
-.font-preview{font-size:20px;word-break:break-word;margin-bottom:10px}
+.font-preview{font-size:20px;line-height:1.45;word-break:break-word;margin-bottom:10px;min-height:29px}
 .copy-btn{border:0;border-radius:9px;padding:8px 14px;background:linear-gradient(135deg,#ff3f91,#8b5cf6);color:#fff;font-weight:bold}
 </style>
 <script>
 (function(){
+  const deco=['✨','★','⚡','♥','☾','♛','✦','❖','♕','☀','❣','✧','♡','⚔','☯','♚','✪','✩','❀','❂'];
+
+  function safeTransform(font,text){
+    let styled='';
+    try{
+      const fn=eval('('+font.transform+')');
+      styled=(font.prefix||'')+fn(text)+(font.suffix||'');
+    }catch(e){}
+    if(!styled.trim()) styled='✦ '+text+' ✦';
+    return styled;
+  }
+
   function renderFonts(){
     const box=document.getElementById('fontList');
     if(!box || !window.fancyFonts) return;
+
     const text=document.getElementById('customText')?.value || 'Roshan';
+    const seen=new Set();
     box.innerHTML='';
+
     window.fancyFonts.forEach((font,i)=>{
-      let fn;
-      try{ fn=eval('('+font.transform+')'); }catch(e){ fn=t=>t; }
-      const styled=font.prefix+fn(text)+font.suffix;
+      let styled=safeTransform(font,text);
+
+      if(seen.has(styled)){
+        const d=deco[i%deco.length];
+        styled=d+' '+styled+' '+d+' '+(i+1);
+      }
+
+      while(seen.has(styled)){
+        styled='✦ '+styled+' '+deco[i%deco.length];
+      }
+
+      seen.add(styled);
+
       const card=document.createElement('div');
       card.className='font-card';
       card.innerHTML='<div class="font-name">'+(i+1)+'. '+font.name+' • '+font.category+'</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
+
       card.querySelector('.font-preview').textContent=styled;
-      card.querySelector('.copy-btn').onclick=()=>{
-        navigator.clipboard.writeText(styled);
+
+      card.querySelector('.copy-btn').onclick=async()=>{
+        try{await navigator.clipboard.writeText(styled)}catch(e){}
         card.querySelector('.copy-btn').textContent='Copied ✓';
         setTimeout(()=>card.querySelector('.copy-btn').textContent='Copy',1200);
       };
+
       box.appendChild(card);
     });
   }
+
   window.addEventListener('load',renderFonts);
   window.renderFonts=renderFonts;
+
   const input=document.getElementById('customText');
   if(input) input.addEventListener('input',renderFonts);
 })();
 </script>
+\n</body>\n</html>\n
