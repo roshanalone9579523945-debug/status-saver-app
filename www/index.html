@@ -27,7 +27,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
 .ad{position:fixed;bottom:0;left:0;right:0;height:58px;background:#0e1220;border-top:1px solid #252c42;display:flex;align-items:center;justify-content:center;color:#66708a;font-size:12px}
 .count{color:#29e7ff;font-size:13px;margin:8px 2px}
 </style>
-</head>
+<style>#bioCategories{display:flex;gap:8px;overflow-x:auto;padding:8px 2px 12px;scrollbar-width:none}#bioCategories::-webkit-scrollbar{display:none}#bioCategories .cat{flex:0 0 auto;border:1px solid #333;background:#151827;color:#ddd;border-radius:20px;padding:8px 13px;font-size:13px;font-weight:600}#bioCategories .cat.active{background:#ff2d8d;color:#fff;border-color:#ff2d8d;box-shadow:0 0 12px rgba(255,45,141,.25)}</style></head>
 <body>
 <div class="app">
   <div class="logo">
@@ -62,7 +62,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
   </div>
 
   <div id="bios" class="section">
-    <div class="count">Available: 250 Insta Bios</div>
+    <div class="count">Available: 250 Insta Bios</div><div class="category-chips" id="bioCategories"><button class="cat active" data-cat="All">All</button><button class="cat" data-cat="😎 Attitude">😎 Attitude</button><button class="cat" data-cat="👑 Royal / Luxury">👑 Royal</button><button class="cat" data-cat="❤️ Love">❤️ Love</button><button class="cat" data-cat="💔 Broken">💔 Broken</button><button class="cat" data-cat="🧠 Deep / Thoughtful">🧠 Deep</button><button class="cat" data-cat="💪 Motivation">💪 Motivation</button><button class="cat" data-cat="🏋️ Gym / Fitness">🏋️ Gym</button><button class="cat" data-cat="💻 Tech / Developer">💻 Tech</button><button class="cat" data-cat="🎮 Gaming">🎮 Gaming</button><button class="cat" data-cat="✈️ Travel">✈️ Travel</button><button class="cat" data-cat="📸 Creator">📸 Creator</button><button class="cat" data-cat="🖤 Dark / Savage">🖤 Dark</button><button class="cat" data-cat="😄 Funny">😄 Funny</button><button class="cat" data-cat="🙏 Spiritual">🙏 Spiritual</button><button class="cat" data-cat="🇮🇳 Desi / Indian">🇮🇳 Desi</button><button class="cat" data-cat="💼 Business / Professional">💼 Business</button><button class="cat" data-cat="🌱 Simple / Minimal">🌱 Simple</button></div>
     <div id="bioList"></div>
   </div>
 
@@ -107,6 +107,38 @@ function updatePreview(){
     });
   }
   window.addEventListener('load',renderBios);
+
+document.addEventListener('click',function(e){
+  const btn=e.target.closest('#bioCategories .cat');
+  if(!btn) return;
+
+  document.querySelectorAll('#bioCategories .cat').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+
+  const cat=btn.dataset.cat;
+  const box=document.getElementById('bioList');
+  if(!box || !window.instaBios) return;
+
+  box.innerHTML='';
+
+  window.instaBios
+    .filter(bio=>cat==='All' || bio.category===cat)
+    .forEach(bio=>{
+      const card=document.createElement('div');
+      card.className='font-card';
+      card.innerHTML='<div class="font-name">#'+bio.id+' • '+bio.category+'</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
+
+      card.querySelector('.font-preview').textContent=bio.text;
+
+      card.querySelector('.copy-btn').onclick=async()=>{
+        try{await navigator.clipboard.writeText(bio.text)}catch(e){}
+        card.querySelector('.copy-btn').textContent='Copied ✓';
+        setTimeout(()=>card.querySelector('.copy-btn').textContent='Copy',1200);
+      };
+
+      box.appendChild(card);
+    });
+});
 })();
 </script>\n
 <style>
