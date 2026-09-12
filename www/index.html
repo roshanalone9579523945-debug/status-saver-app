@@ -243,6 +243,10 @@ window.addEventListener('load', async () => {
     console.log('AdMob test banner shown');
   } catch (error) {
     console.error('AdMob error:', error);
+    const box = document.getElementById('admob-banner');
+    if (box) {
+      box.innerText = 'AdMob Error: ' + (error?.message || JSON.stringify(error));
+    }
   }
 });
 </script>
