@@ -166,16 +166,31 @@ document.addEventListener('click',function(e){
 (function(){
   const deco=['✨','★','⚡','♥','☾','♛','✦','❖','♕','☀','❣','✧','♡','⚔','☯','♚','✪','✩','❀','❂'];
 
-  function safeTransform(font,text){
-    let styled='';
-    try{
-      const fn=eval('('+font.transform+')');
-      styled=(font.prefix||'')+fn(text)+(font.suffix||'');
-    }catch(e){}
-    if(!styled.trim()) styled='✦ '+text+' ✦';
-    return styled;
-  }
+  function safeTransform(font,text,i){
+    const sets=[
+      [0x1D400,0x1D41A],[0x1D434,0x1D44E],[0x1D468,0x1D482],
+      [0x1D5A0,0x1D5BA],[0x1D5D4,0x1D5EE],[0x1D608,0x1D622],
+      [0x1D63C,0x1D656],[0x1D670,0x1D68A],[0x1D4D0,0x1D4EA],
+      [0x1D49C,0x1D4B6],[0x1D504,0x1D51E],[0x1D538,0x1D552],
+      [0x1D56C,0x1D586],[0x1D5A0,0x1D5BA],[0x1D5D4,0x1D5EE],
+      [0x1D608,0x1D622],[0x1D63C,0x1D656],[0x1D400,0x1D41A],
+      [0x1D434,0x1D44E],[0x1D468,0x1D482]
+    ];
+    const wraps=[
+      ["",""],["✦ "," ✦"],["★ "," ★"],["✨ "," ✨"],["⚡ "," ⚡"],
+      ["♥ "," ♥"],["☾ "," ☽"],["♛ "," ♛"],["❖ "," ❖"],["✧ "," ✧"]
+    ];
+    const st=sets[i%20], w=wraps[Math.floor(i/20)%10];
 
+    function cv(c){
+      const n=c.codePointAt(0);
+      if(n>=65&&n<=90) return String.fromCodePoint(st[0]+n-65);
+      if(n>=97&&n<=122) return String.fromCodePoint(st[1]+n-97);
+      return c;
+    }
+
+    return w[0]+[...text].map(cv).join("")+w[1];
+  }
   function renderFonts(){
     const box=document.getElementById('fontList');
     if(!box || !window.fancyFonts) return;
@@ -185,7 +200,7 @@ document.addEventListener('click',function(e){
     box.innerHTML='';
 
     window.fancyFonts.forEach((font,i)=>{
-      let styled=safeTransform(font,text);
+      let styled=safeTransform(font,text,i);
 
       if(seen.has(styled)){
         const d=deco[i%deco.length];
