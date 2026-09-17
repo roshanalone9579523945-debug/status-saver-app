@@ -230,14 +230,14 @@ window.addEventListener('load', async () => {
       return;
     }
 
-    await AdMob.initialize({ initializeForTesting: true });
+    await AdMob.initialize({ initializeForTesting: false });
 
     await AdMob.showBanner({
       adId: 'ca-app-pub-8408674302706281/5084072146',
       adSize: 'ADAPTIVE_BANNER',
       position: 'BOTTOM_CENTER',
       margin: 0,
-      isTesting: true
+      isTesting: false
     });
 
     console.log('AdMob test banner shown');
