@@ -230,6 +230,28 @@ window.addEventListener('load', async () => {
       return;
     }
 
+    const showStatus = (msg) => {
+      console.log(msg);
+      let box = document.getElementById('admob-diagnostic');
+      if (!box) {
+        box = document.createElement('div');
+        box.id = 'admob-diagnostic';
+        box.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:99999;padding:8px;background:#111;color:#fff;font-size:12px;text-align:center;';
+        document.body.appendChild(box);
+      }
+      box.textContent = msg;
+    };
+
+    AdMob.addListener('bannerAdLoaded', () => {
+      showStatus('AdMob: BANNER LOADED ✓');
+    });
+
+    AdMob.addListener('bannerAdFailedToLoad', (error) => {
+      showStatus('AdMob FAILED: ' + JSON.stringify(error));
+    });
+
+    showStatus('AdMob: initializing...');
+
     await AdMob.initialize({ initializeForTesting: false });
 
     await AdMob.showBanner({
@@ -240,13 +262,13 @@ window.addEventListener('load', async () => {
       isTesting: false
     });
 
-    console.log('AdMob test banner shown');
+    showStatus('AdMob: banner request sent...');
   } catch (error) {
     console.error('AdMob error:', error);
-    const box = document.getElementById('admob-banner');
-    if (box) {
-      box.innerText = 'AdMob Error: ' + (error?.message || JSON.stringify(error));
-    }
+    const msg = 'AdMob ERROR: ' + (error?.message || JSON.stringify(error));
+    console.error(msg);
+    let box = document.getElementById('admob-diagnostic');
+    if (box) box.textContent = msg;
   }
 });
 </script>
