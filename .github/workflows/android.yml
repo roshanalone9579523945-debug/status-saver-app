@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - final-admob-app
+      - production-admob-final
   workflow_dispatch:
 
 jobs:
