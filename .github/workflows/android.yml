@@ -34,13 +34,30 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Build Debug APK
-        working-directory: android
-        run: ./gradlew assembleDebug
+      - name: Decode release keystore
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 --decode > android/status-saver-release.jks
 
-      - name: Upload APK
+      - name: Create keystore properties
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          cat > android/keystore.properties <<EOF
+          storeFile=../status-saver-release.jks
+          storePassword=${KEYSTORE_PASSWORD}
+          keyAlias=status-saver
+          keyPassword=${KEYSTORE_PASSWORD}
+          EOF
+
+      - name: Build Release APK
+        working-directory: android
+        run: ./gradlew assembleRelease
+
+      - name: Upload Release APK
         uses: actions/upload-artifact@v4
         with:
-          name: insta-font-bio-hub-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          name: insta-font-bio-hub-release-apk
+          path: android/app/build/outputs/apk/release/app-release.apk
 
