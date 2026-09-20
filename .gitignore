@@ -1,1 +1,10 @@
 node_modules/
+
+# Release signing credentials
+android/keystore.properties
+android/*.jks
+
+# Local backup files
+**/*-backup.*
+**/*-before-*.*
+android/app/src/main/*.backup.xml
