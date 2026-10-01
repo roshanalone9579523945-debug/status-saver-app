@@ -3,7 +3,7 @@
 <head><script src="capacitor.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Insta Font & Bio Hub</title>
+<title>Font & Bio Studio</title>
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#080b16;color:#fff;font-family:Arial,sans-serif}
@@ -32,13 +32,13 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
 <div class="app">
   <div class="logo">
     <div class="logo-icon">✨</div>
-    <h1>Insta Font & Bio Hub</h1>
+    <h1>Font & Bio Studio</h1>
     <div class="subtitle">Fonts • Bios • Hashtags</div>
   </div>
 
   <div class="tabs">
     <button class="tab active" onclick="showTab('fonts',this)">Fancy Fonts</button>
-    <button class="tab" onclick="showTab('bios',this)">Insta Bios</button>
+    <button class="tab" onclick="showTab('bios',this)">Bio Ideas</button>
     <button class="tab" onclick="showTab('hashtags',this)">Hashtags</button>
   </div>
 
@@ -53,7 +53,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
   </div>
 
   <div id="bios" class="section">
-    <div class="count">Available: 250 Insta Bios</div><div class="category-chips" id="bioCategories"><button class="cat active" data-cat="All">All</button><button class="cat" data-cat="😎 Attitude">😎 Attitude</button><button class="cat" data-cat="👑 Royal / Luxury">👑 Royal</button><button class="cat" data-cat="❤️ Love">❤️ Love</button><button class="cat" data-cat="💔 Broken">💔 Broken</button><button class="cat" data-cat="🧠 Deep / Thoughtful">🧠 Deep</button><button class="cat" data-cat="💪 Motivation">💪 Motivation</button><button class="cat" data-cat="🏋️ Gym / Fitness">🏋️ Gym</button><button class="cat" data-cat="💻 Tech / Developer">💻 Tech</button><button class="cat" data-cat="🎮 Gaming">🎮 Gaming</button><button class="cat" data-cat="✈️ Travel">✈️ Travel</button><button class="cat" data-cat="📸 Creator">📸 Creator</button><button class="cat" data-cat="🖤 Dark / Savage">🖤 Dark</button><button class="cat" data-cat="😄 Funny">😄 Funny</button><button class="cat" data-cat="🙏 Spiritual">🙏 Spiritual</button><button class="cat" data-cat="🇮🇳 Desi / Indian">🇮🇳 Desi</button><button class="cat" data-cat="💼 Business / Professional">💼 Business</button><button class="cat" data-cat="🌱 Simple / Minimal">🌱 Simple</button></div>
+    <div class="count">Available: 250 Bio Ideas</div><div class="category-chips" id="bioCategories"><button class="cat active" data-cat="All">All</button><button class="cat" data-cat="😎 Attitude">😎 Attitude</button><button class="cat" data-cat="👑 Royal / Luxury">👑 Royal</button><button class="cat" data-cat="❤️ Love">❤️ Love</button><button class="cat" data-cat="💔 Broken">💔 Broken</button><button class="cat" data-cat="🧠 Deep / Thoughtful">🧠 Deep</button><button class="cat" data-cat="💪 Motivation">💪 Motivation</button><button class="cat" data-cat="🏋️ Gym / Fitness">🏋️ Gym</button><button class="cat" data-cat="💻 Tech / Developer">💻 Tech</button><button class="cat" data-cat="🎮 Gaming">🎮 Gaming</button><button class="cat" data-cat="✈️ Travel">✈️ Travel</button><button class="cat" data-cat="📸 Creator">📸 Creator</button><button class="cat" data-cat="🖤 Dark / Savage">🖤 Dark</button><button class="cat" data-cat="😄 Funny">😄 Funny</button><button class="cat" data-cat="🙏 Spiritual">🙏 Spiritual</button><button class="cat" data-cat="🇮🇳 Desi / Indian">🇮🇳 Desi</button><button class="cat" data-cat="💼 Business / Professional">💼 Business</button><button class="cat" data-cat="🌱 Simple / Minimal">🌱 Simple</button></div>
     <div id="bioList"></div>
   </div>
 
@@ -62,9 +62,9 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
 (function(){
   function renderHashtags(){
     const box=document.getElementById('hashtagList');
-    if(!box || !window.instaHashtags) return;
+    if(!box || !window.socialHashtags) return;
     box.innerHTML='';
-    window.instaHashtags.forEach((tags,i)=>{
+    window.socialHashtags.forEach((tags,i)=>{
       const card=document.createElement('div');
       card.className='font-card';
       card.innerHTML='<div class="font-name">#'+(i+1)+' • Hashtag Set</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
@@ -80,7 +80,7 @@ input{width:100%;padding:13px;border:1px solid #303850;border-radius:11px;backgr
   window.addEventListener('load',renderHashtags);
 })();
 </script>
-    <div class="count">Trending Instagram Hashtags</div>
+    <div class="count">Trending Social Hashtags</div>
   </div>
 </div>
 
@@ -103,10 +103,10 @@ function updatePreview(){
 (function(){
   function renderBios(){
     const box=document.getElementById('bioList');
-    if(!box || !window.instaBios) return;
+    if(!box || !window.bioIdeas) return;
     box.innerHTML='';
 
-    window.instaBios.forEach((bio)=>{
+    window.bioIdeas.forEach((bio)=>{
       const card=document.createElement('div');
       card.className='font-card';
       card.innerHTML='<div class="font-name">#'+bio.id+' • '+bio.category+'</div><div class="font-preview"></div><button class="copy-btn">Copy</button>';
@@ -130,11 +130,11 @@ document.addEventListener('click',function(e){
 
   const cat=btn.dataset.cat;
   const box=document.getElementById('bioList');
-  if(!box || !window.instaBios) return;
+  if(!box || !window.bioIdeas) return;
 
   box.innerHTML='';
 
-  window.instaBios
+  window.bioIdeas
     .filter(bio=>cat==='All' || bio.category===cat)
     .forEach(bio=>{
       const card=document.createElement('div');

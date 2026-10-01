@@ -1,4 +1,4 @@
-window.instaBios=[
+window.bioIdeas=[
   {
     "id": 1,
     "category": "😎 Attitude",
